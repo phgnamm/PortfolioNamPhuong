@@ -20,17 +20,20 @@ function TechStack() {
   return (
     <section className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-center mb-8 font-bold">EXPERIENCE WITH</h1>
+        <h1 className="text-center mb-8 text-4xl font-bold">
+          Experience <span className="text-blue-400">with</span>
+        </h1>
         <div className="flex justify-center gap-8 flex-wrap">
           {techStack.map(({ name, img }) => (
             <div
               key={name}
-              className="w-16 h-16 shadow-lg rounded-lg flex items-center justify-center "
+              className="w-16 h-16 shadow-lg rounded-lg flex items-center justify-center  hover:scale-110 transition duration-300"
+              title={`${name} - 1 year experience`}
             >
               <img
                 src={img}
                 alt="{name}"
-                className="w-full h-full object-cover"
+                className="w-14 h-14 object-contain"
               />
             </div>
           ))}

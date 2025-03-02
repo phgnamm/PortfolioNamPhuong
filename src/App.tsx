@@ -1,5 +1,7 @@
+import Experience from "./components/Experience";
 import Hero from "./components/Hero";
 import Navigation from "./components/Navigation";
+import Projects from "./components/Projects";
 import TechStack from "./components/TechStack";
 function App() {
   return (
@@ -8,6 +10,8 @@ function App() {
         <Navigation />
         <Hero />
         <TechStack />
+        <Experience />
+        <Projects />
       </div>
     </>
   );

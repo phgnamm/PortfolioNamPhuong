@@ -32,7 +32,10 @@ function Hero() {
           architectures on the Amazon AWS platform.
         </p>
         <div className="flex justify-center gap-4">
-          <button onClick={handleClick} className="px-6 py-2 rounded-full">
+          <button
+            onClick={handleClick}
+            className="px-6 py-2 rounded-full bg-blue-400 hover: cursor-pointer hover:bg-blue-500"
+          >
             {" "}
             Get in Touch
           </button>

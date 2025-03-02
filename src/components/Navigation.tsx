@@ -6,9 +6,9 @@ function Navigation() {
         <div className="font-bold text-2xl">Suzy</div>
         <div className="flex items-center gap-8">
           <div className="flex space-x-8 ">
-            <a href="">Home</a>
-            <a href="">Project</a>
-            <a href="">Experience</a>
+            <a href="#home">Home</a>
+            <a href="#projects">Project</a>
+            <a href="#experience">Experience</a>
             <a href="">Contact</a>
           </div>
           <button>
