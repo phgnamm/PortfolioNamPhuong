@@ -1,7 +1,10 @@
 import imageprofile from "../image/Doona Bae Suzy wallpaper.png";
 import { motion } from "framer-motion";
 import { useState } from "react";
-function Hero() {
+interface HeroProps {
+  isDark: boolean;
+}
+function Hero({ isDark }: HeroProps) {
   const [showCat, setShowCat] = useState(false);
 
   const handleClick = () => {
@@ -20,12 +23,20 @@ function Hero() {
             className="w-full h-full object-cover"
           />
         </div>
-        <h1 className="text-4xl font-bold mb-6">
+        <h1
+          className={`text-4xl font-bold mb-6 ${
+            isDark ? "text-white" : "text-gray-900"
+          }`}
+        >
           I do code and <br /> make content{" "}
           <span className="text-[#ff6b6b]">about</span>{" "}
           <span className="text-[#b16cea]">it!</span>
         </h1>
-        <p className="max-w-2xl mx-auto mb-8">
+        <p
+          className={`max-w-2xl mx-auto mb-8 ${
+            isDark ? "text-gray-400" : "text-gray-600"
+          }`}
+        >
           I am a seasoned full-stack software engineer with over 8 years of
           professional experience, specializing in backend development. My
           expertise lies in crafting robust and scalable SaaS-based
@@ -41,7 +52,11 @@ function Hero() {
           </button>
           <button
             onClick={() => window.open("https://www.youtube.com/", "_blank")}
-            className="border px-6 py-2 rounded-full hover:bg-blue-500 hover:text-white transition duration-300 shadow hover:shadow-lg cursor-pointer "
+            className={`border ${
+              isDark
+                ? "border-white text-white"
+                : "border-gray-900 text-gray-900"
+            } px-6 py-2 rounded-full hover:bg-opacity-10 hover:bg-current transition`}
           >
             {" "}
             Download CV

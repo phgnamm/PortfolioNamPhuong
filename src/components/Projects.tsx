@@ -36,7 +36,7 @@ function Projects() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="group relative rounded-xl overflow-hidden shadow-lg border-1 border-gray-400"
+              className="group relative rounded-xl overflow-hidden shadow-lg border-1 border-gray-400 transform transition-transform hover:scale-102 cursor-pointer"
             >
               <img
                 src={project.image}

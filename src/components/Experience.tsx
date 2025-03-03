@@ -1,4 +1,7 @@
-function Experience() {
+interface ExperienceProps {
+  isDark: boolean;
+}
+function Experience({ isDark }: ExperienceProps) {
   const experiences = [
     {
       company: "Google",
@@ -28,11 +31,23 @@ function Experience() {
               className="border-l-2 border-blue-500 pl-8 relative"
             >
               <div className="absolute w-4 h-4 rounded-full -left-[8px] top-0 bg-blue-500" />
-              <h3 className="text-xl font-bold mb-1 text-gray-900">
+              <h3
+                className={`text-xl font-bold mb-1 ${
+                  isDark ? "text-white" : "text-gray-900"
+                }`}
+              >
                 {exp.role} at {exp.company}
               </h3>
-              <p className="text-gray-600 text-sm mb-4">{exp.period}</p>
-              <p className="text-gray-700">{exp.description}</p>
+              <p
+                className={`text-sm mb-4 ${
+                  isDark ? "text-gray-400" : "text-gray-600"
+                }`}
+              >
+                {exp.period}
+              </p>
+              <p className={isDark ? "text-gray-300" : "text-gray-700"}>
+                {exp.description}
+              </p>
             </div>
           ))}
         </div>

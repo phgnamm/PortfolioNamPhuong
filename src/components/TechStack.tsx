@@ -6,7 +6,10 @@ import figma from "../image/figma.png";
 import tailwind from "../image/tailwindcss.png";
 import typescript from "../image/typescript.png";
 import postgresql from "../image/postgresql.png";
-function TechStack() {
+interface TechStackProps {
+  isDark: boolean;
+}
+function TechStack({ isDark }: TechStackProps) {
   const techStack = [
     { name: "C#", img: csharp },
     { name: "Figma", img: figma },
@@ -20,7 +23,11 @@ function TechStack() {
   return (
     <section className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-center mb-8 text-4xl font-bold">
+        <h1
+          className={`text-center mb-8 text-4xl font-bold ${
+            isDark ? "text-white" : "text-black"
+          }`}
+        >
           Experience <span className="text-blue-400">with</span>
         </h1>
         <div className="flex justify-center gap-8 flex-wrap">
