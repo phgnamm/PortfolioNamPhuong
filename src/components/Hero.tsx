@@ -52,13 +52,12 @@ function Hero({ isDark }: HeroProps) {
           </button>
           <button
             onClick={() => window.open("https://www.youtube.com/", "_blank")}
-            className={`border ${
+            className={`px-6 py-2 rounded-full border transition-colors ${
               isDark
-                ? "border-white text-white"
-                : "border-gray-900 text-gray-900"
-            } px-6 py-2 rounded-full hover:bg-opacity-10 hover:bg-current transition`}
+                ? "border-white text-white hover:bg-white/10 cursor-pointer"
+                : "border-gray-900 text-gray-900 hover:bg-gray-900/10 cursor-pointer"
+            }`}
           >
-            {" "}
             Download CV
           </button>
         </div>
