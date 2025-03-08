@@ -1,3 +1,4 @@
+import Contact from "./components/Contact";
 import Certificates from "./components/Certificates";
 import Experience from "./components/Experience";
 import Hero from "./components/Hero";
@@ -17,6 +18,7 @@ function App() {
         <Experience isDark={isDark} />
         <Projects />
         <Certificates isDark={isDark} />
+        <Contact isDark={isDark} />
       </div>
     </>
   );
